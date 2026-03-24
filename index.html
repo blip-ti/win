@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для моей прекрасной Мадины ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Layers -->
+    <div class="parallax-bg" id="parallaxBg"></div>
+    <canvas id="masterpieceCanvas"></canvas>
+    
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-toggle" id="musicToggle" title="Включить музыку">
+            <span class="icon">🎵</span>
+            <span class="status-text">Музыка выкл.</span>
+        </button>
+        <span class="music-info">Добавь music.mp3 в папку проекта</span>
+        <audio id="bgMusic" loop autoplay>
+            <source src="music.mp3" type="audio/mpeg">
+            <source src="music.MP3" type="audio/mpeg">
+            <source src="music.m4a" type="audio/mp4">
+            <source src="music.wav" type="audio/wav">
+        </audio>
+    </div>
+
+    <!-- Side Navigation (Timeline) -->
+    <nav class="side-nav">
+        <div class="nav-item active" data-target="hero"><span>Начало</span></div>
+        <div class="nav-item" data-target="start"><span>Искра</span></div>
+        <div class="nav-item" data-target="first-gift"><span>Подарок</span></div>
+        <div class="nav-item" data-target="together-1"><span>Мы</span></div>
+        <div class="nav-item" data-target="favorite-photo"><span>Любимое</span></div>
+        <div class="nav-item" data-target="my-world"><span>Мой мир</span></div>
+        <div class="nav-item" data-target="happiest-moment"><span>Сердце</span></div>
+    </nav>
+
+    <main class="container" id="mainContainer">
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="hero-content glass reveal-scale" data-parallax="0.2">
+                <h1 class="fade-in">Для моей прекрасной Мадины</h1>
+                <p class="fade-in delay-1">Ты — моё самое красивое приключение. Позволь мне показать тебе нашу историю... в новом свете.</p>
+                <div class="start-btn-container fade-in delay-2">
+                    <button class="start-journey-btn" onclick="scrollToId('start')">
+                        Начни наше путешествие
+                        <span class="heart-icon">❤️</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 1: Начало -->
+        <section id="start" class="section">
+            <div class="content glass reveal-up" data-parallax="0.1">
+                <h2 class="section-title">Всё началось с искры</h2>
+                <div class="media-grid">
+                    <div class="parallax-item" data-parallax="0.05">
+                        <img src="Начало 1.jpg" alt="Начало 1" class="reveal">
+                    </div>
+                    <div class="parallax-item" data-parallax="-0.05">
+                        <img src="Начало 2.jpg" alt="Начало 2" class="reveal delay-1">
+                    </div>
+                </div>
+                <div class="poetic-text">
+                    <p>Тот самый миг, когда мир вокруг замер. Первые взгляды, первые слова... Наше "вчера" превращалось в общее "сегодня".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 2: Первый подарок -->
+        <section id="first-gift" class="section">
+            <div class="content glass reveal-left" data-parallax="0.15">
+                <h2 class="section-title">Память о первом подарке</h2>
+                <div class="media-container parallax-item" data-parallax="0.1">
+                    <img src="Первый подарок.JPG" alt="Первый подарок" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>Маленький жест, который сказал о многом. В этом подарке — тепло моих мыслей о тебе с самого начала.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 3: Вместе 1 -->
+        <section id="together-1" class="section">
+            <div class="content glass reveal-right" data-parallax="0.1">
+                <h2 class="section-title">Первые шаги вдвоем</h2>
+                <div class="media-container parallax-item" data-parallax="-0.08">
+                    <img src="Фото вместе 1.PNG" alt="Фото вместе 1" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>Мы только учились быть "нами". Каждое мгновение рядом казалось чудом, которое хочется сохранить навсегда.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 4: Вместе 2 -->
+        <section id="together-2" class="section">
+            <div class="content glass reveal-up" data-parallax="0.2">
+                <h2 class="section-title">Ты — моё вдохновение</h2>
+                <div class="media-container parallax-item" data-parallax="0.12">
+                    <img src="Фото вместе 2.JPG" alt="Фото вместе 2" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>В твоей улыбке я находил силы, а в твоем присутствии — покой. Время с тобой летит незаметно, но оставляет глубокий след.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 5: Вместе 3 -->
+        <section id="together-3" class="section">
+            <div class="content glass reveal-left" data-parallax="0.1">
+                <h2 class="section-title">Счастье в мелочах</h2>
+                <div class="media-container parallax-item" data-parallax="-0.1">
+                    <img src="Фото вместе 3.PNG" alt="Фото вместе 3" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>Неважно где, важно — с кем. Твоя рука в моей, и любая дорога становится легкой и прекрасной.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 6: Самое любимое фото -->
+        <section id="favorite-photo" class="section">
+            <div class="content glass reveal-scale" data-parallax="0.15">
+                <h2 class="section-title">Мой любимый кадр</h2>
+                <div class="media-container parallax-item" data-parallax="0.05">
+                    <img src="Самое любомое фото.JPG" alt="Самое любимое фото" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>Здесь ты — сама гармония. Я могу часами смотреть на это фото, вспоминая, как сильно мне повезло встретить тебя.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 7: Самое любимое видео -->
+        <section id="favorite-video" class="section">
+            <div class="content glass reveal-up">
+                <h2 class="section-title">Живые воспоминания</h2>
+                <div class="media-container video-container parallax-item" data-parallax="0.1">
+                    <video controls class="reveal">
+                        <source src="Самое любимое видео.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="poetic-text">
+                    <p>Твой голос, твой смех, твои движения... Это видео — мой личный источник радости в любой пасмурный день.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 8: Первое совместное видео -->
+        <section id="first-video" class="section">
+            <div class="content glass reveal-right">
+                <h2 class="section-title">Первое "Мы" на экране</h2>
+                <div class="media-container video-container parallax-item" data-parallax="-0.05">
+                    <video controls class="reveal">
+                        <source src="Первое совместное видео.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="poetic-text">
+                    <p>Наши первые совместные кадры. Немного застенчивые, бесконечно счастливые. Начало вечности.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 9: Картина мечты -->
+        <section id="dream-painting" class="section">
+            <div class="content glass reveal-scale">
+                <h2 class="section-title">Мир наших мечтаний</h2>
+                <div class="media-container parallax-item" data-parallax="0.08">
+                    <img src="Картина Мечты.JPG" alt="Картина мечты" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>Образ того будущего, которое мы строим вместе. Наши общие цели, которые светят нам ярче любых звезд.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 10: Самое смешное фото -->
+        <section id="funny-photo" class="section">
+            <div class="content glass reveal-up">
+                <h2 class="section-title">Смех сквозь слезы радости</h2>
+                <div class="media-container parallax-item" data-parallax="-0.1">
+                    <img src="Самое смешное фото.JPG" alt="Самое смешное фото" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>Обожаю то, как легко нам вместе. Наши шутки, понятные только нам двоим, и этот искренний, до боли в животе, смех.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 11: Мой мир -->
+        <section id="my-world" class="section">
+            <div class="content glass reveal-scale" data-parallax="0.2">
+                <h2 class="section-title">В твоих глазах — мой мир</h2>
+                <div class="media-container parallax-item" data-parallax="0.1">
+                    <img src="Мой мир.JPG" alt="Глаза Мадины" class="reveal">
+                </div>
+                <div class="poetic-text">
+                    <p>Мне не нужны карты, чтобы найти дорогу домой. Мой дом — в твоем взгляде, в той бесконечной глубине, где я нахожу себя.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 12: Самый счастливый момент -->
+        <section id="happiest-moment" class="section">
+            <div class="content glass reveal-up">
+                <h2 class="section-title">Пик нашего счастья</h2>
+                <div class="media-container video-container parallax-item" data-parallax="0.15">
+                    <video controls class="reveal">
+                        <source src="момент где мы самые счастливые.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="final-message">
+                    <h3 class="fade-in">Ты — моё всё.</h3>
+                    <p class="fade-in delay-1">Я люблю тебя бесконечно, Мадина. ❤️</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
